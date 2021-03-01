@@ -29,11 +29,10 @@ namespace DecentralizeApi.Controllers
 
         // GET api/<TransactionController>/5
         [HttpGet("{id}")]
-        public async Task<IEnumerable<VendorPaymentDto>> Get(int id)
+        public  void Get(int id)
         {
-            DateTime from = DateTime.Parse("01-01-2019");
-            DateTime to = DateTime.Parse("01-01-2021");
-            return await _transactionService.GetAmountPaidPerVendorInTime(from, to);
+
+
         }
 
         // POST api/<TransactionController>

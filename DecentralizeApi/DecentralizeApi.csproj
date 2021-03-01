@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data.Repo\Data.Repo.csproj" />
+    <ProjectReference Include="..\Decentralize\Decentralize.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
