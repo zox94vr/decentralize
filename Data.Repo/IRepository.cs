@@ -11,7 +11,7 @@ namespace Data.Repo
         Task<T> AddAsync(T t);
         Task<T> DeleteAsync(T t);
         Task<T> UpdateAsync(T t);
-        IQueryable<T> Where(Expression<Func<T, bool>> pred);
+        IAsyncQueryBuilder<T> DoQuery();
         Task<T> FindById(string id);
         Task<List<T>> GetAll(T t);
     }

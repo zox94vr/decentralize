@@ -87,6 +87,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Data.Dto\\Data.Dto.csproj": {
+                "projectPath": "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Data.Dto\\Data.Dto.csproj"
+              },
               "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Domain\\Domain.csproj"
               }

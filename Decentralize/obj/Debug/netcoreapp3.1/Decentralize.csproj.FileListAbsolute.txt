@@ -75,3 +75,11 @@ C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Mic
 C:\Users\Zoki\source\repos\Decentralize\Decentralize\obj\Debug\netcoreapp3.1\Decentralize.csproj.CoreCompileInputs.cache
 C:\Users\Zoki\source\repos\Decentralize\Decentralize\obj\Debug\netcoreapp3.1\Decentralize.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Zoki\source\repos\Decentralize\Decentralize\obj\Debug\netcoreapp3.1\Decentralize.csprojAssemblyReference.cache
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Data.Dto.dll
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Data.Repo.dll
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Data.Dto.pdb
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Data.Repo.pdb
+C:\Users\Zoki\source\repos\Decentralize\Decentralize\bin\Debug\netcoreapp3.1\Domain.pdb

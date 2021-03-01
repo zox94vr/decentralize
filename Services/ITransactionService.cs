@@ -8,6 +8,6 @@ namespace Services
     public interface ITransactionService
     {
         Task<List<TransactionDto>> GetAllUnpaidTransactions();
-        Task<List<VendorPaymentDto>> GetAmountPaidPerVendorInTime();
+        Task<List<VendorPaymentDto>> GetAmountPaidPerVendorInTime(DateTime from,DateTime to);
     }
 }

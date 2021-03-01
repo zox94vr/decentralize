@@ -15,7 +15,7 @@ namespace Data.Repo.Implementation
         }
         public override async Task<Consultant> FindById(string id)
         {
-            return await Where(m => m.ConsultantId == id).FirstOrDefaultAsync();
+            return await DoQuery().Filter(m => m.ConsultantId == id).SingleResultAsync();
         }
 
     }

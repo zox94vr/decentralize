@@ -1495,6 +1495,58 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Data.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Data.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Dto.dll": {}
+        }
+      },
+      "Data.Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Dto": "1.0.0",
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Repo.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.12"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Dto": "1.0.0",
+          "Data.Repo": "1.0.0",
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -5712,12 +5764,33 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Data.Dto/1.0.0": {
+      "type": "project",
+      "path": "../Data.Dto/Data.Dto.csproj",
+      "msbuildProject": "../Data.Dto/Data.Dto.csproj"
+    },
+    "Data.Repo/1.0.0": {
+      "type": "project",
+      "path": "../Data.Repo/Data.Repo.csproj",
+      "msbuildProject": "../Data.Repo/Data.Repo.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.12",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.12"
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.12",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5750,7 +5823,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\Zoki\\source\\repos\\Decentralize\\Services\\Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

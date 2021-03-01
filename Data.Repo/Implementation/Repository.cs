@@ -74,18 +74,18 @@ namespace Data.Repo.Implementation
             }
         }
 
-        public virtual IQueryable<T> Where(Expression<Func<T, bool>> pred)
-        {
-            try
-            {
-                return _context.Set<T>().Where(pred);
-            }
-            catch (Exception ex)
-            {
+        //public virtual IQueryable<T> Where(Expression<Func<T, bool>> pred)
+        //{
+        //    try
+        //    {
+        //        return _context.Set<T>().Where(pred);
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                throw new Exception($"Problem in executing Where: " + ex.Message);
-            }
-        }
+        //        throw new Exception($"Problem in executing Where: " + ex.Message);
+        //    }
+        //}
 
 
 
@@ -93,8 +93,8 @@ namespace Data.Repo.Implementation
         {
             throw new NotImplementedException();
         }
-
         public async Task<List<T>> GetAll(T t)=> await _context.Set<T>().ToListAsync();
+        public IAsyncQueryBuilder<T> DoQuery()  => new AsyncQueryBuilder<T>(_context.Set<T>().AsQueryable());
 
 
     }

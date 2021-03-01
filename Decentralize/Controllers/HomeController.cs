@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Decentralize.Models;
+using Services;
 
 namespace Decentralize.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private ITransactionService _transactionService;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger,ITransactionService transactionService)
         {
             _logger = logger;
+            _transactionService = transactionService;
         }
 
         public IActionResult Index()

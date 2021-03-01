@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data.Repo;
+using Data.Repo.Implementation;
+using Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Services;
+using Services.Implementation;
 
 namespace Decentralize
 {
@@ -23,6 +29,16 @@ namespace Decentralize
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IAccountRepository), typeof(AccountRepository));
+            services.AddTransient(typeof(IConsultantRepository), typeof(ConsultantRepository));
+            services.AddTransient(typeof(IProjectRepository), typeof(ProjectRepository));
+            services.AddTransient(typeof(ITransactionRepository), typeof(TransactionRepository));
+            services.AddTransient(typeof(IVendorRepository), typeof(VendorRepository));
+
+            services.AddTransient(typeof(ITransactionService), typeof(TransactionService));
+            services.AddTransient(typeof(IPaymentProcessorService), typeof(PaymentProcessorService));
             services.AddControllersWithViews();
         }
 

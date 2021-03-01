@@ -7,10 +7,7 @@ namespace Domain
 {
     public class Context : DbContext
     {
-        public Context()
-        {
 
-        }
         public virtual DbSet<Account> Acconts { get; set; }
         public virtual DbSet<Consultant> Consultants { get; set; }
         public virtual DbSet<ConsultantVendor> ConsultantsVendors { get; set; }
@@ -19,12 +16,18 @@ namespace Domain
         public virtual DbSet<Vendor> Vendors { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=Decentralize;");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Consultant>().ToTable("Consultant");
+            modelBuilder.Entity<Vendor>().ToTable("Vendor");
+            modelBuilder.Entity<ConsultantVendor>().HasKey(m => new
+            {
+                m.ConsultantId,
+                m.VendorId
+            });
         }
 
     }

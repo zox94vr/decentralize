@@ -9,3 +9,4 @@ C:\Users\Zoki\source\repos\Decentralize\Domain\bin\Debug\netcoreapp3.1\Domain.ru
 C:\Users\Zoki\source\repos\Decentralize\Domain\bin\Debug\netcoreapp3.1\Domain.runtimeconfig.dev.json
 C:\Users\Zoki\source\repos\Decentralize\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Zoki\source\repos\Decentralize\Domain\obj\Debug\netcoreapp3.1\Domain.genruntimeconfig.cache
+C:\Users\Zoki\source\repos\Decentralize\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
